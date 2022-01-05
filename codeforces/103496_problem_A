@@ -7,7 +7,7 @@ int main()
     string s1, s2, s3,s;
     cin>>s1>>s2>>s3;
     s = s1+s2+s3;
-    if(s.find('A')>13)
+    if(s.find('A')>13) //s.find() will give a garbage value much larger than 13 if 'A' is not present there.
     {
         cout<<"Alice\n";
     }
