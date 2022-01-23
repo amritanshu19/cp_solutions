@@ -1,3 +1,4 @@
+//
 #include<bits/stdc++.h>
 using namespace std;
  
@@ -15,30 +16,13 @@ int main()
     sort(a, a+n);
     if(n!=1)
     {
-    for(int i=0; i<n;i++)
-    {
-      if(i!=0||i!=n-1)
+    for(int i=1; i<n;i++)
       {
-      if(abs(a[i-1]-a[i])>1&&abs(a[i+1]-a[i])>1)
-      {
-        mrq++;
+        if(a[i]-a[i-1]>1)
+        {
+          mrq++;
+        }
       }
-      }
-      else if(i==0)
-      {
-        if(abs(a[1]-a[0])>1)
-      {
-        mrq++;
-      }
-      }
-      else if(i==n-1)
-      {
-        if(abs(a[n-1]-a[n-2])>1)
-      {
-        mrq++;
-      }
-      }
-    }
     }
     else if(n==1)
     {
